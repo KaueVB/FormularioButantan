@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ROMANEIO DE ENTREGAS FUNDAÇÃO BUTANTAN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="widht=device-widht, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+
+
+
+    <style>
+body{font-family:Arial,sans-serif;background:#22c1c3;background:radial-gradient(circle,#22c1c3 0,#0f8550 67%)}
+form{max-width:500px;margin:2px auto;padding:15px;border:1px solid #ccc;border-radius:10px;background-color:#fff;box-shadow:2px 2px 10px rgba(0,0,0,.1)}
+h1{font-family:'Noto Sans JP',sans-serif;text-align:center;margin-bottom:30px;color:#f0f8ff;font-weight:700}
+.form-group{font-family:'Noto Sans JP',sans-serif;display:flex;flex-direction:column;margin-bottom:15px}
+label{font-size:14px;margin-bottom:1px}
+input[type=text],textarea{padding:6px;box-sizing:border-box;border:1px solid #ccc;border-radius:4px}
+select[name=NomeDoMotorista]{padding:6px;box-sizing:border-box;border:1px solid #ccc;border-radius:4px;font-size:14px;margin-bottom:5px}
+select[name=AreaDeEntrega]{padding:6px;box-sizing:border-box;border:1px solid #ccc;border-radius:4px;font-size:14px;margin-bottom:5px}
+select[name=NomeDoAjudante]{padding:6px;box-sizing:border-box;border:1px solid #ccc;border-radius:4px;font-size:14px;margin-bottom:5px}
+select[name=TipoVeiculo]{padding:6px;box-sizing:border-box;border:1px solid #ccc;border-radius:4px;font-size:14px;margin-bottom:5px}
+input[type=datetime-local]{padding:6px;box-sizing:border-box;border:1px solid #ccc;border-radius:4px}
+input[type=submit]{width:100%;background-color:#4caf50;color:#fff;padding:5px 5px;border:none;border-radius:4px;cursor:pointer}
+input[type=submit]:hover{background-color:#45a049}
+.imagem{text-align:center}
+canvas#signature{border:2px solid #000;border-radius:4px}
+.assinatura{font-family:'Noto Sans JP',sans-serif;text-align:center;max-width:500px;margin:2px auto;padding:15px;border:1px solid #ccc;border-radius:10px;background-color:#fff;box-shadow:2px 2px 10px rgba(0,0,0,.1)}
+.botoes{justify-content:space-between;align-items:stretch;display:flex}
+    </style>
+</head>
+<body>
+
+</div>  
+    <h1>ROMANEIO DE ENTREGAS FUNDAÇÃO BUTANTAN</h1>
+
+
+    <form action="https://api.sheetmonkey.io/form/881cHwUv2M3pQ2jUyyF4cS"  enctype="multipart/form-data" method="post">
+        <div class="form-group">
+            <label for="datetime-name">Data e Horario de Entrega:</label>
+            <input type="datetime-local" id="datetime-name" name="DataeHoraríoDaEntrega" required>
+        </div>
+        <div class="form-group">
+            <label for="NomeDoMotorista">Nome do Motorista:</label>
+            <select name="NomeDoMotorista" id="motorista" requireds>    
+                <option value=""></option>
+                <option value="Tiago">Tiago</option>
+                <option value="Garcia">Garcia</option>
+                <option value="Edson">Edson</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+                    <label for="NomeDoAjudante">Nome do Ajudante:</label>
+                <select name="NomeDoAjudante" id="ajudante" requireds>    
+                    <option value=""></option>
+                    <option value="Cleber">Cleber</option>
+                    <option value="Sem Ajudante">Sem ajudante</option>
+                    <option value="Leonardo">Leonardo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="iDArea">Area de Entrega ID:</label>
+                <select name="AreaDeEntrega" id="area" required>
+                     <option value=""></option>
+                     <option value="FFSJD08000 - Administração fazenda são joaquim ib">FFSJD08000 - Administração fazenda são joaquim ib</option>
+                     <option value="FDCSD10007 - Almoxarifado indiretos">FDCSD10007 - Almoxarifado indiretos</option>
+                     <option value="FDRHD07003 - Ambulatório">FDRHD07003 - Ambulatório</option>
+                     <option value="IDRHD07003 - Ambulatório médico">IDRHD07003 - Ambulatório médico</option>
+                     <option value="FDCSD10010 - Armazém cadeia fria - car">FDCSD10010 - Armazém cadeia fria - car</option>
+                     <option value="FDCSD10006 - Armazém diretos-produtivos">FDCSD10006 - Armazém diretos-produtivos</option>
+                     <option value="FINFD05200 - Arquitetura e urbanismo">FINFD05200 - Arquitetura e urbanismo</option>
+                     <option value="FDEXD00104 - Assessoria da diretoria executiva">FDEXD00104 - Assessoria da diretoria executiva</option>
+                     <option value="FQARD14002 - Assuntos regulatórios pós registro">FQARD14002 - Assuntos regulatórios pós registro</option>
+                     <option value="FQARD14001 - Assuntos regulatórios registro">FQARD14001 - Assuntos regulatórios registro</option>
+                     <option value="FINFI05106 - Automação">FINFI05106 - Automação</option>
+                     <option value="FDBII12055 - Bac-bacterianas gestão">FDBII12055 - Bac-bacterianas gestão</option>
+                     <option value="FDBII12056 - Bac-bacterianas suporte">FDBII12056 - Bac-bacterianas suporte</option>
+                     <option value="FDBIC12058 - Bac-inóculo e cultivo">FDBIC12058 - Bac-inóculo e cultivo</option>
+                     <option value="FDBIC12061 - Bac-preparo de antígenos">FDBIC12061 - Bac-preparo de antígenos</option>
+                     <option value="FDBIC12057 - Bac-preparo de soluções">FDBIC12057 - Bac-preparo de soluções</option>
+                     <option value="IESID76005 - Biblioteca">IESID76005 - Biblioteca</option>
+                     <option value="FESID76005 - Biblioteca">FESID76005 - Biblioteca</option>
+                     <option value="FDOPD09002 - Biobanco">FDOPD09002 - Biobanco</option>
+                     <option value="IBICI72000 - Biotério central">IBICI72000 - Biotério central</option>
+                     <option value="ICDCD70004 - Biotério de herpetologia">ICDCD70004 - Biotério de herpetologia</option>
+                     <option value="FCDCD70004 - Biotério de herpetologia">FCDCD70004 - Biotério de herpetologia</option>
+                     <option value="FDCSD10008 - Cad- jaguare">FDCSD10008 - Cad- jaguare</option>
+                     <option value="FDCSD10004 - Cadastro">FDCSD10004 - Cadastro</option>
+                     <option value="FDCSD10009 - Caf - centro de armazenagem fsj">FDCSD10009 - Caf - centro de armazenagem fsj</option>
+                     <option value="FBICI72001 - Camundongo">FBICI72001 - Camundongo</option>
+                     <option value="FADMD74004 - Cedoc ib">FADMD74004 - Cedoc ib</option>
+                     <option value="IDBII12000 - Centro bioindustrial">IDBII12000 - Centro bioindustrial</option>
+                     <option value="ICADD77000 - Centro de administração">ICADD77000 - Centro de administração</option>
+                     <option value="FDEXD00103 - Centro de apoio ao ensino">FDEXD00103 - Centro de apoio ao ensino</option>
+                     <option value="FCULD71000 - Centro de desenvolvimento cultural">FCULD71000 - Centro de desenvolvimento cultural</option>
+                     <option value="ICDID73000 - Centro de desenvolvimento e inovação">ICDID73000 - Centro de desenvolvimento e inovação</option>
+                     <option value="FCDID73000 - Centro de desenvolvimento e inovação">FCDID73000 - Centro de desenvolvimento e inovação</option>
+                     <option value="IQARI14000 - Centro de gestão de qualidade">IQARI14000 - Centro de gestão de qualidade</option>
+                     <option value="ICULD71005 - Centro de memórias">ICULD71005 - Centro de memórias</option>
+                     <option value="FCULD71005 - Centro de memórias">FCULD71005 - Centro de memórias</option>
+                     <option value="IDRHD07000 - Centro de recursos humanos">IDRHD07000 - Centro de recursos humanos</option>
+                     <option value="IDECD13000 - Centro ens clínicos e farmacovigilância">IDECD13000 - Centro ens clínicos e farmacovigilância</option>
+                     <option value="FDPED03005 - Comercial">FDPED03005 - Comercial</option>
+                     <option value="FDCSD10003 - Comex">FDCSD10003 - Comex</option>
+                     <option value="FDJCD02004 - Compliance">FDJCD02004 - Compliance</option>
+                     <option value="FDCSD10001 - Compras e licitações">FDCSD10001 - Compras e licitações</option>
+                     <option value="ICADD77001 - Comum. adm e ativi. complementares">ICADD77001 - Comum. adm e ativi. complementares</option>
+                     <option value="FCOMD04000 - Comunicação interna e assessoria">FCOMD04000 - Comunicação interna e assessoria</option>
+                     <option value="FTICD06009 - Conectividade">FTICD06009 - Conectividade</option>
+                     <option value="FFIND11003 - Contabilidade e fiscal">FFIND11003 - Contabilidade e fiscal</option>
+                     <option value="FFIND11002 - Contas a pagar e receber">FFIND11002 - Contas a pagar e receber</option>
+                     <option value="FQARI14020 - Contr de qualid compliance estabilidade">FQARI14020 - Contr de qualid compliance estabilidade</option>
+                     <option value="FFIND11001 - Controladoria">FFIND11001 - Controladoria</option>
+                     <option value="FQARD14022 - Controle de qualidade - p&d e projetos">FQARD14022 - Controle de qualidade - p&d e projetos</option>
+                     <option value="FQARI14021 - Controle de qualidade biológico">FQARI14021 - Controle de qualidade biológico</option>
+                     <option value="FQARI14019 - Controle de qualidade físico químico">FQARI14019 - Controle de qualidade físico químico</option>
+                     <option value="FQARI14018 - Controle de qualidade microbiológico">FQARI14018 - Controle de qualidade microbiológico</option>
+                     <option value="FDJCD02005 - Convênios">FDJCD02005 - Convênios</option>
+                     <option value="FDBIC12031 - Cps-preparo de soluções">FDBIC12031 - Cps-preparo de soluções</option>
+                     <option value="FDBII12029 - Cps-soros gestão">FDBII12029 - Cps-soros gestão</option>
+                     <option value="FDBII12030 - Cps-soros suporte">FDBII12030 - Cps-soros suporte</option>
+                     <option value="FDECD13007 - Dados clínicos">FDECD13007 - Dados clínicos</option>
+                     <option value="FDBII12001 - Dbi-bioindustrial suporte">FDBII12001 - Dbi-bioindustrial suporte</option>
+                     <option value="FDBII12000 - Dbi-diretoria bioindustrial gestão">FDBII12000 - Dbi-diretoria bioindustrial gestão</option>
+                     <option value="FQARD14008 - Desenvolvimento analitico - p&d">FQARD14008 - Desenvolvimento analitico - p&d</option>
+                     <option value="FDECD13002 - Desenvolvimento clinico">FDECD13002 - Desenvolvimento clinico</option>
+                     <option value="FTICD06005 - Desenvolvimento de sistemas">FTICD06005 - Desenvolvimento de sistemas</option>
+                     <option value="FDRHD07002 - Desenvolvimento humano e organizacional">FDRHD07002 - Desenvolvimento humano e organizacional</option>
+                     <option value="ICDCD70000 - Dir centro de desenvolvimento científico">ICDCD70000 - Dir centro de desenvolvimento científico</option>
+                     <option value="FQARI14000 - Dir gestão qualid. assuntos regulatórios">FQARI14000 - Dir gestão qualid. assuntos regulatórios</option>
+                     <option value="FCDCD70000 - Dir. centro desenvolvimento científico">FCDCD70000 - Dir. centro desenvolvimento científico</option>
+                     <option value="FDCSD10000 - Diretoria da cadeia de suprimentos">FDCSD10000 - Diretoria da cadeia de suprimentos</option>
+                     <option value="FDDID15000 - Diretoria de desenvolvimento industrial">FDDID15000 - Diretoria de desenvolvimento industrial</option>
+                     <option value="FINFI05000 - Diretoria de infraestrutura">FINFI05000 - Diretoria de infraestrutura</option>
+                     <option value="FDPED03003 - Diretoria de negócios">FDPED03003 - Diretoria de negócios</option>
+                     <option value="FDEID01000 - Diretoria estrat. institucional">FDEID01000 - Diretoria estrat. institucional</option>
+                     <option value="FDEXD00100 - Diretoria executiva">FDEXD00100 - Diretoria executiva</option>
+                     <option value="FDJCD02000 - Diretoria jurídica e compliance">FDJCD02000 - Diretoria jurídica e compliance</option>
+                     <option value="FDECD13000 - Diretoria médica de ensaios clínicos">FDECD13000 - Diretoria médica de ensaios clínicos</option>
+                     <option value="FDPED03000 - Diretoria projetos estratégicos">FDPED03000 - Diretoria projetos estratégicos</option>
+                     <option value="FDRHD07000 - Diretoria recursos humanos">FDRHD07000 - Diretoria recursos humanos</option>
+                     <option value="IDTCD00150 - Diretoria técnica">IDTCD00150 - Diretoria técnica</option>
+                     <option value="FTICD06000 - Diretoria tecnologia da informação">FTICD06000 - Diretoria tecnologia da informação</option>
+                     <option value="FQARD14003 - Dt qualidade p&d e pesq. clinicas">FQARD14003 - Dt qualidade p&d e pesq. clinicas</option>
+                     <option value="FDBII12003 - Edp-engenharia de produção">FDBII12003 - Edp-engenharia de produção</option>
+                     <option value="FDECD13004 - Epidemologia">FDECD13004 - Epidemologia</option>
+                     <option value="FDEID01003 - Escritório licenciamento inovação tecnol">FDEID01003 - Escritório licenciamento inovação tecnol</option>
+                     <option value="IESID76001 - Esib">IESID76001 - Esib</option>
+                     <option value="FESID76001 - Esib">FESID76001 - Esib</option>
+                     <option value="FDECD13003 - Farmacovigilancia, sac e seg. clinica">FDECD13003 - Farmacovigilancia, sac e seg. clinica</option>
+                     <option value="FDBIC12021 - Fea-envase e recrave">FDBIC12021 - Fea-envase e recrave</option>
+                     <option value="FDBII12017 - Fea-form., envase e acondicionamento gt.">FDBII12017 - Fea-form., envase e acondicionamento gt.</option>
+                     <option value="FDBII12018 - Fea-form., envase e acondicionamento sp.">FDBII12018 - Fea-form., envase e acondicionamento sp.</option>
+                     <option value="FDBIC12020 - Fea-formulação">FDBIC12020 - Fea-formulação</option>
+                     <option value="FDBIC12022 - Fea-inspeção visual">FDBIC12022 - Fea-inspeção visual</option>
+                     <option value="FDBII12019 - Fea-preparo de soluções e monitoramento">FDBII12019 - Fea-preparo de soluções e monitoramento</option>
+                     <option value="FADMD74001 - Finanças ib">FADMD74001 - Finanças ib</option>
+                     <option value="FINFD05602 - Fiscalização de obras civis">FINFD05602 - Fiscalização de obras civis</option>
+                     <option value="FDPED03008 - Franquia arboviroses(dengue chikungunya)">FDPED03008 - Franquia arboviroses(dengue chikungunya)</option>
+                     <option value="FDPED03007 - Franquia influenza">FDPED03007 - Franquia influenza</option>
+                     <option value="FQARI14013 - Garantia da qualidade">FQARI14013 - Garantia da qualidade</option>
+                     <option value="FQARI14011 - Garantia da qualidade de sistemas">FQARI14011 - Garantia da qualidade de sistemas</option>
+                     <option value="FQARD14009 - Garantia da qualidade médica">FQARD14009 - Garantia da qualidade médica</option>
+                     <option value="FQARD14007 - Garantia da qualidade p&d e projetos">FQARD14007 - Garantia da qualidade p&d e projetos</option>
+                     <option value="FDDID15001 - Gerência de desenvolvimento industrial">FDDID15001 - Gerência de desenvolvimento industrial</option>
+                     <option value="FDEID01001 - Gerencia de relações internacionais">FDEID01001 - Gerencia de relações internacionais</option>
+                     <option value="FDJCD02001 - Gerência do jurídico">FDJCD02001 - Gerência do jurídico</option>
+                     <option value="FBICI72000 - Gestão biotério central">FBICI72000 - Gestão biotério central</option>
+                     <option value="FDJCD02003 - Gestão contratos">FDJCD02003 - Gestão contratos</option>
+                     <option value="FDPED03001 - Gestão escritório de projetos">FDPED03001 - Gestão escritório de projetos</option>
+                     <option value="FDOPD09001 - Gestão qualidade corporativa">FDOPD09001 - Gestão qualidade corporativa</option>
+                     <option value="FTICD06002 - Governança de ti">FTICD06002 - Governança de ti</option>
+                     <option value="FDCSD10011 - Gt. indicadores governança inteligência">FDCSD10011 - Gt. indicadores governança inteligência</option>
+                     <option value="FDBIC12069 - Hep-hepatite produção">FDBIC12069 - Hep-hepatite produção</option>
+                     <option value="IHOSD75000 - Hospital vital brazil">IHOSD75000 - Hospital vital brazil</option>
+                     <option value="FHOSD75000 - Hospital vital brazil">FHOSD75000 - Hospital vital brazil</option>
+                     <option value="FTICD06007 - Infraestrutura de ti operacional">FTICD06007 - Infraestrutura de ti operacional</option>
+                     <option value="FTICD06003 - Inteligência de negócios">FTICD06003 - Inteligência de negócios</option>
+                     <option value="ICDCD70006 - Lab de biologia estrutural e funcional">ICDCD70006 - Lab de biologia estrutural e funcional</option>
+                     <option value="FCDID73008 - Lab. de desenvolvimento de processos">FCDID73008 - Lab. de desenvolvimento de processos</option>
+                     <option value="FCDCD70010 - Lab. de desenvolvimento de vacinas">FCDCD70010 - Lab. de desenvolvimento de vacinas</option>
+                     <option value="FCDID73015 - Lab. de desenvolvimento e inovação">FCDID73015 - Lab. de desenvolvimento e inovação</option>
+                     <option value="FCDCD70002 - Lab. estratégico diagnóstico molecular">FCDCD70002 - Lab. estratégico diagnóstico molecular</option>
+                     <option value="FCDCD70006 - Labo. de biologia estrutural e funcional">FCDCD70006 - Labo. de biologia estrutural e funcional</option>
+                     <option value="FBICI72003 - Laboratório">FBICI72003 - Laboratório</option>
+                     <option value="ICDID73014 - Laboratório da dor e sinalização">ICDID73014 - Laboratório da dor e sinalização</option>
+                     <option value="FCDID73014 - Laboratório da dor e sinalização">FCDID73014 - Laboratório da dor e sinalização</option>
+                     <option value="ICDCD70005 - Laboratório de bacteriologia">ICDCD70005 - Laboratório de bacteriologia</option>
+                     <option value="FCDCD70005 - Laboratório de bacteriologia">FCDCD70005 - Laboratório de bacteriologia</option>
+                     <option value="ICDID73011 - Laboratório de biofármacos">ICDID73011 - Laboratório de biofármacos</option>
+                     <option value="FCDID73011 - Laboratório de biofármacos">FCDID73011 - Laboratório de biofármacos</option>
+                     <option value="ICDID73007 - Laboratório de biológicos recombinantes">ICDID73007 - Laboratório de biológicos recombinantes</option>
+                     <option value="FCDID73007 - Laboratório de biológicos recombinantes">FCDID73007 - Laboratório de biológicos recombinantes</option>
+                     <option value="ICDCD70007 - Laboratório de bioquímica e biofísica">ICDCD70007 - Laboratório de bioquímica e biofísica</option>
+                     <option value="FCDCD70007 - Laboratório de bioquímica e biofísica">FCDCD70007 - Laboratório de bioquímica e biofísica</option>
+                     <option value="ICDID73009 - Laboratório de biotecnologia viral">ICDID73009 - Laboratório de biotecnologia viral</option>
+                     <option value="FCDID73009 - Laboratório de biotecnologia viral">FCDID73009 - Laboratório de biotecnologia viral</option>
+                     <option value="ICDCD70008 - Laboratório de ciclo celular">ICDCD70008 - Laboratório de ciclo celular</option>
+                     <option value="FCDCD70008 - Laboratório de ciclo celular">FCDCD70008 - Laboratório de ciclo celular</option>
+                     <option value="ICDCD70009 - Laboratório de coleções zoológicas">ICDCD70009 - Laboratório de coleções zoológicas</option>
+                     <option value="FCDCD70009 - Laboratório de coleções zoológicas">FCDCD70009 - Laboratório de coleções zoológicas</option>
+                     <option value="ICDCD70011 - Laboratório de ecologia e evolução">ICDCD70011 - Laboratório de ecologia e evolução</option>
+                     <option value="FCDCD70011 - Laboratório de ecologia e evolução">FCDCD70011 - Laboratório de ecologia e evolução</option>
+                     <option value="ICDCD70012 - Laboratório de farmacologia">ICDCD70012 - Laboratório de farmacologia</option>
+                     <option value="FCDCD70012 - Laboratório de farmacologia">FCDCD70012 - Laboratório de farmacologia</option>
+                     <option value="ICDCD70013 - Laboratório de fisiopatologia">ICDCD70013 - Laboratório de fisiopatologia</option>
+                     <option value="FCDCD70013 - Laboratório de fisiopatologia">FCDCD70013 - Laboratório de fisiopatologia</option>
+                     <option value="ICDID73012 - Laboratório de genética">ICDID73012 - Laboratório de genética</option>
+                     <option value="FCDID73012 - Laboratório de genética">FCDID73012 - Laboratório de genética</option>
+                     <option value="ICDID73500 - Laboratório de hemoderivados">ICDID73500 - Laboratório de hemoderivados</option>
+                     <option value="ICDCD70014 - Laboratório de imunogenética">ICDCD70014 - Laboratório de imunogenética</option>
+                     <option value="FCDCD70014 - Laboratório de imunogenética">FCDCD70014 - Laboratório de imunogenética</option>
+                     <option value="ICDCD70015 - Laboratório de imunopatologia">ICDCD70015 - Laboratório de imunopatologia</option>
+                     <option value="FCDCD70015 - Laboratório de imunopatologia">FCDCD70015 - Laboratório de imunopatologia</option>
+                     <option value="ICDID73013 - Laboratório de imunoquímica">ICDID73013 - Laboratório de imunoquímica</option>
+                     <option value="FCDID73013 - Laboratório de imunoquímica">FCDID73013 - Laboratório de imunoquímica</option>
+                     <option value="ICDCD70016 - Laboratório de parasitologia">ICDCD70016 - Laboratório de parasitologia</option>
+                     <option value="FCDCD70016 - Laboratório de parasitologia">FCDCD70016 - Laboratório de parasitologia</option>
+                     <option value="ICDCD70017 - Laboratório de toxinologia aplicada">ICDCD70017 - Laboratório de toxinologia aplicada</option>
+                     <option value="FCDCD70017 - Laboratório de toxinologia aplicada">FCDCD70017 - Laboratório de toxinologia aplicada</option>
+                     <option value="ICDID73010 - Laboratório de virologia">ICDID73010 - Laboratório de virologia</option>
+                     <option value="FCDID73010 - Laboratório de virologia">FCDID73010 - Laboratório de virologia</option>
+                     <option value="ICDID73008 - Laboratório desenvolvimento de processos">ICDID73008 - Laboratório desenvolvimento de processos</option>
+                     <option value="ICDCD70010 - Laboratório desenvolvimento de vacinas">ICDCD70010 - Laboratório desenvolvimento de vacinas</option>
+                     <option value="ICDID73015 - Laboratório desenvolvimento e inovação">ICDID73015 - Laboratório desenvolvimento e inovação</option>
+                     <option value="FCDID73001 - Laboratório especial centd">FCDID73001 - Laboratório especial centd</option>
+                     <option value="ICDID73016 - Laboratório multipropósito">ICDID73016 - Laboratório multipropósito</option>
+                     <option value="FCDID73016 - Laboratório multipropósito">FCDID73016 - Laboratório multipropósito</option>
+                     <option value="ICDID73006 - Laboratório piloto vacinas virais">ICDID73006 - Laboratório piloto vacinas virais</option>
+                     <option value="FCDID73006 - Laboratório piloto vacinas virais">FCDID73006 - Laboratório piloto vacinas virais</option>
+                     <option value="FDBIC12013 - Lin-clarificação">FDBIC12013 - Lin-clarificação</option>
+                     <option value="FDBIC12012 - Lin-colheita">FDBIC12012 - Lin-colheita</option>
+                     <option value="FDBII12010 - Lin-descontaminação de resíduos">FDBII12010 - Lin-descontaminação de resíduos</option>
+                     <option value="FDBIC12016 - Lin-filtração">FDBIC12016 - Lin-filtração</option>
+                     <option value="FDBIC12015 - Lin-fragmentação e inativação">FDBIC12015 - Lin-fragmentação e inativação</option>
+                     <option value="FDBII12007 - Lin-gestão laboratório influenza">FDBII12007 - Lin-gestão laboratório influenza</option>
+                     <option value="FDBIC12011 - Lin-inoculação">FDBIC12011 - Lin-inoculação</option>
+                     <option value="FDBII12008 - Lin-laboratório influenza suporte">FDBII12008 - Lin-laboratório influenza suporte</option>
+                     <option value="FDBIC12009 - Lin-preparo de soluções">FDBIC12009 - Lin-preparo de soluções</option>
+                     <option value="FDBIC12014 - Lin-purificação">FDBIC12014 - Lin-purificação</option>
+                     <option value="FDCSD10005 - Logística">FDCSD10005 - Logística</option>
+                     <option value="FINFI05104 - Manutenção industrial">FINFI05104 - Manutenção industrial</option>
+                     <option value="FINFI05105 - Manutenção predial">FINFI05105 - Manutenção predial</option>
+                     <option value="FINFD05115 - Manutenção shopfloor nutera-rp">FINFD05115 - Manutenção shopfloor nutera-rp</option>
+                     <option value="FINFI05112 - Manutenção shopfloor p-1015">FINFI05112 - Manutenção shopfloor p-1015</option>
+                     <option value="FINFI05111 - Manutenção shopfloor p-1021">FINFI05111 - Manutenção shopfloor p-1021</option>
+                     <option value="FINFI05114 - Manutenção shopfloor p-1022">FINFI05114 - Manutenção shopfloor p-1022</option>
+                     <option value="FINFI05110 - Manutenção shopfloor p-41">FINFI05110 - Manutenção shopfloor p-41</option>
+                     <option value="FINFI05113 - Manutenção shopfloor p-44">FINFI05113 - Manutenção shopfloor p-44</option>
+                     <option value="FINFI05108 - Manutenção shopfloor p-45-83">FINFI05108 - Manutenção shopfloor p-45-83</option>
+                     <option value="FINFI05109 - Manutenção shopfloor p-59">FINFI05109 - Manutenção shopfloor p-59</option>
+                     <option value="FDECD13005 - Medical writing">FDECD13005 - Medical writing</option>
+                     <option value="FINFD05302 - Meio ambiente">FINFD05302 - Meio ambiente</option>
+                     <option value="FINFI05107 - Metrologia">FINFI05107 - Metrologia</option>
+                     <option value="ICULD71001 - Museu biológico">ICULD71001 - Museu biológico</option>
+                     <option value="FCULD71001 - Museu biológico">FCULD71001 - Museu biológico</option>
+                     <option value="FCULD71002 - Museu de microbiologia">FCULD71002 - Museu de microbiologia</option>
+                     <option value="FCULD71006 - Museu de vacinas">FCULD71006 - Museu de vacinas</option>
+                     <option value="ICULD71004 - Museu emilio ribas">ICULD71004 - Museu emilio ribas</option>
+                     <option value="FCULD71004 - Museu emilio ribas">FCULD71004 - Museu emilio ribas</option>
+                     <option value="FCULD71003 - Museu histórico">FCULD71003 - Museu histórico</option>
+                     <option value="FDBID12053 - Naa-experimentação animal">FDBID12053 - Naa-experimentação animal</option>
+                     <option value="FDBID12054 - Naa-melhoria de produtos">FDBID12054 - Naa-melhoria de produtos</option>
+                     <option value="FDBID12049 - Naa-novos antigenos e adjuvantes gestão">FDBID12049 - Naa-novos antigenos e adjuvantes gestão</option>
+                     <option value="FDBID12050 - Naa-novos antígenos e adjuvantes suporte">FDBID12050 - Naa-novos antígenos e adjuvantes suporte</option>
+                     <option value="FDBID12051 - Naa-preparo de soluções">FDBID12051 - Naa-preparo de soluções</option>
+                     <option value="FDBID12052 - Naa-produção e caracterização">FDBID12052 - Naa-produção e caracterização</option>
+                     <option value="FDPED03010 - Novos negócios e inteligência negócios">FDPED03010 - Novos negócios e inteligência negócios</option>
+                     <option value="ICADD77002 - Núcleo da manut. e conservação">ICADD77002 - Núcleo da manut. e conservação</option>
+                     <option value="ICADD77003 - Núcleo de adm. da subfrota">ICADD77003 - Núcleo de adm. da subfrota</option>
+                     <option value="ICADD77004 - Núcleo de adm. fazenda são joaquim">ICADD77004 - Núcleo de adm. fazenda são joaquim</option>
+                     <option value="IDBII12500 - Núcleo de apoio a produção">IDBII12500 - Núcleo de apoio a produção</option>
+                     <option value="ICADD77006 - Núcleo de compras e suprim.">ICADD77006 - Núcleo de compras e suprim.</option>
+                     <option value="FESID76003 - Núcleo de cursos, programas e eventos">FESID76003 - Núcleo de cursos, programas e eventos</option>
+                     <option value="IFIND11500 - Núcleo de finanças">IFIND11500 - Núcleo de finanças</option>
+                     <option value="IDBII12504 - Núcleo de prod. de soros">IDBII12504 - Núcleo de prod. de soros</option>
+                     <option value="IDBII12502 - Núcleo de prod. de vac. bacterianas">IDBII12502 - Núcleo de prod. de vac. bacterianas</option>
+                     <option value="IDBII12503 - Núcleo de prod. de vacinas virais">IDBII12503 - Núcleo de prod. de vacinas virais</option>
+                     <option value="FESID76002 - Núcleo de produções técnicas">FESID76002 - Núcleo de produções técnicas</option>
+                     <option value="IESID76004 - Núcleo de suporte operacional">IESID76004 - Núcleo de suporte operacional</option>
+                     <option value="FESID76004 - Núcleo de suporte operacional">FESID76004 - Núcleo de suporte operacional</option>
+                     <option value="FDOPD09003 - Nutera - rp">FDOPD09003 - Nutera - rp</option>
+                     <option value="FDOPD09004 - Nutera - sp">FDOPD09004 - Nutera - sp</option>
+                     <option value="FDRHD07001 - Operação de recursos humanos">FDRHD07001 - Operação de recursos humanos</option>
+                     <option value="FDECD13008 - Operações clínicas">FDECD13008 - Operações clínicas</option>
+                     <option value="FINFI05103 - Operações utilidades black">FINFI05103 - Operações utilidades black</option>
+                     <option value="FINFI05102 - Operações utilidades clean">FINFI05102 - Operações utilidades clean</option>
+                     <option value="FDBII12026 - Oph-análises laboratoriais">FDBII12026 - Oph-análises laboratoriais</option>
+                     <option value="FDBIC12028 - Oph-imunização e coleta">FDBIC12028 - Oph-imunização e coleta</option>
+                     <option value="FDBII12024 - Oph-obtenção de plasmas gestão">FDBII12024 - Oph-obtenção de plasmas gestão</option>
+                     <option value="FDBID12044 - Pam-anticorpos monoclonais gestão">FDBID12044 - Pam-anticorpos monoclonais gestão</option>
+                     <option value="FDBID12045 - Pam-anticorpos monoclonais suporte">FDBID12045 - Pam-anticorpos monoclonais suporte</option>
+                     <option value="FDPED03004 - Parcerias estratégicas e novos produtos">FDPED03004 - Parcerias estratégicas e novos produtos</option>
+                     <option value="FADMD74006 - Patrimônio ib">FADMD74006 - Patrimônio ib</option>
+                     <option value="FDBII12004 - Pbi-banco gestão">FDBII12004 - Pbi-banco gestão</option>
+                     <option value="FDBIC12005 - Pbi-banco produção">FDBIC12005 - Pbi-banco produção</option>
+                     <option value="FDCSD10002 - Pcp">FDCSD10002 - Pcp</option>
+                     <option value="FDCSD10013 - Pesagem">FDCSD10013 - Pesagem</option>
+                     <option value="FINFI05101 - Planejamento e controle da manutenção">FINFI05101 - Planejamento e controle da manutenção</option>
+                     <option value="FDBID12062 - Pmv-multipropósito de vacinas gestão">FDBID12062 - Pmv-multipropósito de vacinas gestão</option>
+                     <option value="FDBID12063 - Pmv-multipropósito de vacinas suporte">FDBID12063 - Pmv-multipropósito de vacinas suporte</option>
+                     <option value="FBICI72002 - Produção ratos, hamster, cobaia e coelho">FBICI72002 - Produção ratos, hamster, cobaia e coelho</option>
+                     <option value="FTICD06006 - Projetos de sistemas">FTICD06006 - Projetos de sistemas</option>
+                     <option value="FINFD05400 - Projetos industriais">FINFD05400 - Projetos industriais</option>
+                     <option value="FADMD74005 - Protocolo ib">FADMD74005 - Protocolo ib</option>
+                     <option value="FDBID12041 - Pvd-cultivo viral e formulação">FDBID12041 - Pvd-cultivo viral e formulação</option>
+                     <option value="FDBID12039 - Pvd-dengue gestão">FDBID12039 - Pvd-dengue gestão</option>
+                     <option value="FDBID12040 - Pvd-dengue suporte">FDBID12040 - Pvd-dengue suporte</option>
+                     <option value="FDBID12043 - Pvd-envase, recrave e inspeção">FDBID12043 - Pvd-envase, recrave e inspeção</option>
+                     <option value="FDBID12042 - Pvd-preparo soluções e cultivo celular">FDBID12042 - Pvd-preparo soluções e cultivo celular</option>
+                     <option value="FQARI14012 - Qualidade compliance">FQARI14012 - Qualidade compliance</option>
+                     <option value="FQARI14005 - Qualidade operações">FQARI14005 - Qualidade operações</option>
+                     <option value="FQARI14017 - Qualificação águas">FQARI14017 - Qualificação águas</option>
+                     <option value="FQARI14014 - Qualificação equipamentos e projetos">FQARI14014 - Qualificação equipamentos e projetos</option>
+                     <option value="FQARI14016 - Qualificação hvac">FQARI14016 - Qualificação hvac</option>
+                     <option value="FQARI14015 - Qualificação térmica e gases">FQARI14015 - Qualificação térmica e gases</option>
+                     <option value="FDRHD07004 - Rh instituto">FDRHD07004 - Rh instituto</option>
+                     <option value="FTICD06001 - Segurança da informação">FTICD06001 - Segurança da informação</option>
+                     <option value="FINFD05301 - Segurança do trabalho">FINFD05301 - Segurança do trabalho</option>
+                     <option value="FINFD05300 - Segurança do trabalho e meio ambiente">FINFD05300 - Segurança do trabalho e meio ambiente</option>
+                     <option value="FQARD14004 - Sistemas da qualidade farmaceutico">FQARD14004 - Sistemas da qualidade farmaceutico</option>
+                     <option value="FQARD14010 - Sistemas da qualidade p&d">FQARD14010 - Sistemas da qualidade p&d</option>
+                     <option value="FADMD74003 - Subfrota ib">FADMD74003 - Subfrota ib</option>
+                     <option value="FDEXD00101 - Superintendência">FDEXD00101 - Superintendência</option>
+                     <option value="FTICD06008 - Suporte de ti">FTICD06008 - Suporte de ti</option>
+                     <option value="FFIND11004 - Tesouraria">FFIND11004 - Tesouraria</option>
+                     <option value="FQARI14006 - Validação">FQARI14006 - Validação</option>
+                     <option value="FDBIC12038 - Vea-processamento e liofilização">FDBIC12038 - Vea-processamento e liofilização</option>
+                     <option value="FDBII12036 - Vea-venenos e antivenenos suporte">FDBII12036 - Vea-venenos e antivenenos suporte</option>
+                     <option value="FDPED03002 - Viabilidade econômica de projetos">FDPED03002 - Viabilidade econômica de projetos</option>
+                </select>
+            </div>
+            
+            
+        <div class="form-group">
+            <label for="rm-number">Numero da RM:</label>
+            <input type="text" id="rm-number" name="NumeroDaRM" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="nf-name">Nota Fiscal:</label>
+          <input type="text" id="nf-name" name="NotaFiscal" required>
+      </div>
+
+      <div class="form-group">
+        <label for="TipoVeiculo">Veiculo Utilizado:</label>
+    <select name="TipoVeiculo" id="veiculo" requireds>    
+        <option value=""></option>
+        <option value="Expertcargo-FZX-0C62">Expert cargo - FZX-0C62</option>
+        <option value="CaminhãoVUC11.180DRC4x2-FVM-2G38">Caminhão VUC 11.180 DRC 4x2 - FVM-2G38</option>
+        <option value="CarretaMeteor28.4606x2-EPO-2A06/BZL-0D26">Carreta Meteor 28.460 6x2 - EPO-2A06/BZL-0D26</option>
+        </select>
+</div>
+
+    <div class="form-group">
+        <label for="fimatendimento">Fim do Atendimento:</label>
+        <input type="time" id="fimatendimento" name="FimDoAtendimento" required>
+    </div>
+    
+    
+    <div class="form-group">
+        <label for="img">Envie a assinatura:</label>
+        <input type="file" id="img" name="imagem" required>
+    </div>
+    
+    
+    
+    <input type="submit" value="Enviar">
+</form>
+
+<div class="assinatura">
+    <label for="signature">Assinatura do Responsável (Declaro que recebi os materiais mencionados acima):</label>
+    <canvas id="signature" width="500" height="190"></canvas><br>
+    <div class="botoes">
+    <button onclick="captureScreenshot()">Tirar Screenshot</button>
+    <button id="clearSignature">Limpar Assinatura</button>
+    <button onclick="openGmailApp()">Enviar comprovante</button>
+</div>
+</div>
+
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+    <script>
+       
+
+       $(document).ready(function(){$("#area").select2()}),$(document).ready(function(){$("#ajudante").select2()}),$(document).ready(function(){$("#motorista").select2()}),$(document).ready(function(){$("#veiculo").select2()});var signature=document.getElementById("signature"),signaturePad=new SignaturePad(signature);function captureScreenshot(){html2canvas(document.body).then(function(e){var e=e.toDataURL(),n=document.createElement("a");n.href=e,n.download="screenshot.png",n.click()})}function openGmailApp(){window.open("https://mail.google.com","_blank")}document.getElementById("clearSignature").addEventListener("click",function(){signaturePad.clear()});
+    </script>
+
+</body>
+</html>
